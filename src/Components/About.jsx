@@ -24,19 +24,21 @@ const imageAltText = "purple and blue abstract background";
  * Sort description that expands on your title on the Home component.
  */
 const description =
-  "I'm a UI/UX student studying at Barnett Technical University. I enjoy creating unique and simplistic user interfaces in creative ways.";
+  "I'm an AIML student studying at Anurag University. I enjoy creating unique and simplistic user interfaces in creative ways.";
 
 /**
  * List of some of skills or technologies you work on, are learning,
  * passionate about, or enjoy,
  */
 const skillsList = [
-  "Web design",
-  "User experience",
-  "Inclusive design",
-  "Focus group testing",
-  "Mobile user interfaces",
-  "Graphic design",
+  "Java",
+  "Python",
+  "HTML",
+  "CSS",
+  "Bootstrap",
+  "JavaScript",
+  "React"
+  
 ];
 
 /**
@@ -45,7 +47,11 @@ const skillsList = [
  * about you on a professional level.
  */
 const detailOrQuote =
-  "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my UI/UX experience I continually look for new and better ways to make tech accessible by all.";
+  "I'm passionate about tackling challenges with fresh, creative approaches that drive innovation. With my skills in web design, I'm always seeking new ways to enhance user experiences and make technology accessible for everyone.";
+
+// Links to external profiles
+const hackerrankUrl = "https://www.hackerrank.com/dashboard";
+const leetcodeUrl = "https://leetcode.com/u/Susmi24/";
 
 const About = () => {
   return (
@@ -78,6 +84,15 @@ const About = () => {
         </ul>
         <hr />
         <p style={{ padding: "1rem 3rem 0" }}>{detailOrQuote}</p>
+        <div style={{ marginTop: "1.5rem" }}>
+          <a href={hackerrankUrl} target="_blank" rel="noopener noreferrer">
+            HackerRank
+          </a>{" "}
+          |{" "}
+          <a href={leetcodeUrl} target="_blank" rel="noopener noreferrer">
+            LeetCode
+          </a>
+        </div>
       </div>
     </section>
   );

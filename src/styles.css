@@ -65,20 +65,28 @@ h3 {
   font-size: 1.25rem;
   margin: 0;
 }
+h3:hover {
+  color: brown;
+}
 
 p {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 0;
   font-weight: 300;
+  color: seashell;
+ 
 }
 
 p.large {
   font-size: 24px;
+  color: seashell;
 }
 
 p.small {
   font-size: 15px;
+  font-weight: 400;
+  color: rgb(39, 37, 2);
 }
 
 hr {
@@ -87,10 +95,11 @@ hr {
 
 li {
   line-height: 1.7;
+  color: seashell;
 }
 
 li::marker {
-  color: #4e567e;
+  color: whitesmoke;
 }
 
 a {
@@ -99,7 +108,7 @@ a {
 }
 
 a:hover {
-  color: #4e567e;
+  color: #151d41;
 }
 
 .container {
@@ -123,3 +132,8 @@ img.socialIcon {
   height: 30px;
   width: 30px;
 }
+
+img.socialIcon:hover {
+  filter: grayscale(100%) brightness(0);
+}
+

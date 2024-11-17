@@ -19,6 +19,7 @@ import React from "react";
  * Need an image? Check out https://unsplash.com to download a photo you
  * freely use on your site.
  */
+import images from "../images/portfolio-background.png";
 import image from "../images/design-desk.png";
 
 const imageAltText = "desktop with books and laptop";
@@ -34,19 +35,20 @@ const projectList = [
     title: "Campus Recruitment Management System",
     description:
       "(CRMS) is a web-based platform designed to streamline the recruitment process for students and placement officers.Backend: Node.js, Express.js, MongoDB | Frontend: HTML, CSS, JS | Middleware: Mongoose | Security: bcryptjs, Express-Session",
-    url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i",
+    url: "https://github.com/Susmithaivaturi/Campus-Recruitment-Management-System",
   },
   {
     title: "Online Learning Platform",
     description:
       "It is designed to streamline the process of delivering online courses. Backend: Node.js, Express.js, MongoDB | Frontend: HTML, CSS, JS | Middleware: Mongoose | Security: bcryptjs, Express-Session",
-    url: "https://github.com/microsoft/web-dev-for-beginners",
+    url: "https://github.com/Susmithaivaturi/LearningPlatform",
   },
 ];
 
 const Portfolio = () => {
   return (
     <section className="padding" id="portfolio">
+    <img className="background" src={images} alt={imageAltText} />
       <h2 style={{ textAlign: "center" }}>Portfolio</h2>
       <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem" }}>
         <div style={{ maxWidth: "40%", alignSelf: "center" }}>
@@ -62,7 +64,7 @@ const Portfolio = () => {
               className="box"
               key={project.title}
               style={{
-                border: "1px solid #ddd",
+                border: "1px solid black",
                 padding: "1rem",
                 margin: "1rem 0",
                 borderRadius: "8px",

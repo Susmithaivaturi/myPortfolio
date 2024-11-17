@@ -10,12 +10,12 @@ html, body {
 
 div#main {
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   display: flex;
 }
 
 section {
-  width: 100vw;
+  width: 100%;
   position: relative;
 }
 
@@ -31,23 +31,25 @@ section img.background {
   object-fit: cover;
   pointer-events: none;
   z-index: -1;
-  width: 100vmax;
+  width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%);
+  transform: translateX(-50%);
 }
 
 h1 {
+  text-align: center;
   margin: 0;
   font-family: Cormorant Garamond, serif;
-  font-size: 7rem;
+  font-size: 6rem;
   font-weight: 400;
   line-height: .8;
 }
 
 h2 {
+  text-align: center;
   margin: 0;
   padding-top: 1rem;
   font-size: 2rem;
@@ -55,6 +57,7 @@ h2 {
 }
 
 h3 {
+  text-align: center;
   margin: 0;
   font-size: 1.25rem;
   font-weight: 400;
@@ -66,6 +69,7 @@ h3:hover {
 
 p {
   color: #fff5ee;
+  text-align: center;
   margin-bottom: 0;
   font-size: 18px;
   font-weight: 300;
@@ -84,7 +88,8 @@ p.small {
 }
 
 hr {
-  margin: 2.5rem;
+  width: 80%;
+  margin: 2.5rem auto;
 }
 
 li {
@@ -107,8 +112,9 @@ a:hover {
 
 .container {
   grid-gap: 20px;
-  grid-template-columns: 330px 300px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   margin: 20px auto;
+  padding: 0 15px;
   display: grid;
 }
 
@@ -129,5 +135,113 @@ img.socialIcon {
 
 img.socialIcon:hover {
   filter: grayscale() brightness(0);
+}
+
+@media screen and (width >= 1200px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .container .box {
+    padding: 28px 20px;
+  }
+}
+
+@media screen and (width <= 1199px) and (width >= 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .container .box {
+    padding: 24px 18px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  img.socialIcon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media screen and (width <= 767px) and (width >= 480px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .container .box {
+    padding: 20px 15px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  img.socialIcon {
+    width: 22px;
+    height: 22px;
+  }
+
+  hr {
+    width: 90%;
+  }
+}
+
+@media screen and (width <= 479px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+
+  .container .box {
+    padding: 18px 12px;
+  }
+
+  img.socialIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  hr {
+    width: 95%;
+  }
 }
 /*# sourceMappingURL=index.4d663569.css.map */
